@@ -1,29 +1,64 @@
 # Trie Autocomplete and Spell Checker (C++)
 
-This project implements a Trie data structure to support
-efficient autocomplete and spell checking functionality.
+This project implements a **Trie (Prefix Tree) data structure** to provide fast autocomplete suggestions and basic spell checking functionality.
 
-The system loads a dictionary of words with frequency values
-and provides suggestions based on prefix matching and
-edit distance.
+The system loads a dictionary of words with frequency values and returns suggestions based on prefix matching.  
+Spell correction suggestions are generated using edit distance.
 
-## Features
-• Trie data structure implementation
-• Prefix-based autocomplete
-• Spell checking using edit distance
-• Suggestions ranked by word frequency
-• Fast search using Trie traversal
-• Dictionary-based word lookup
+--------------------------------------------------
 
-## Technologies
-C++
-STL (unordered_map, vector, memory)
-Data Structures (Trie)
-Dynamic Programming (Edit Distance)
+FEATURES
 
-## How to Run
+- Trie data structure implementation
+- Fast prefix-based autocomplete
+- Dictionary-based word lookup
+- Spell check suggestions
+- Suggestions ranked using word frequency
+- Efficient search operations
 
-Compile the program:
+--------------------------------------------------
+
+TECHNOLOGIES USED
+
+Language
+- C++
+
+Concepts
+- Data Structures (Trie)
+- Prefix Search
+- Edit Distance for spell checking
+
+Libraries
+- C++ STL (vector, string, unordered_map)
+
+--------------------------------------------------
+
+PROJECT STRUCTURE
+
+trie-autocomplete-spellchecker
+|
+|-- main.cpp
+|-- trie.cpp
+|-- trie.h
+|-- editdistance.cpp
+|-- sample_dictionary.txt
+|
+|-- README.md
+
+--------------------------------------------------
+
+HOW IT WORKS
+
+1. Words are loaded from a dictionary file.
+2. Each word is inserted into the Trie structure.
+3. When a prefix is entered, the Trie is traversed to find matching words.
+4. The system returns the top suggestions based on frequency.
+
+--------------------------------------------------
+
+COMPILATION
+
+Compile the program using:
 
 g++ main.cpp trie.cpp editdistance.cpp -o trie
 
@@ -31,12 +66,24 @@ Run the program:
 
 ./trie
 
-## Example Functions
+--------------------------------------------------
 
-1. Autocomplete
-Input: "pro"
-Output: program, process, product
+TEAM PROJECT
 
-2. Spell Checker
-Input: "progarm"
-Output: program
+This project was developed as a collaborative academic project.
+
+My contributions included:
+- Implementing the Trie data structure
+- Developing prefix-based autocomplete functionality
+- Integrating dictionary lookup and suggestion logic
+
+The edit distance algorithm used for spell checking was implemented by my teammate.
+
+--------------------------------------------------
+
+FUTURE IMPROVEMENTS
+
+- Larger dictionary dataset
+- GUI-based interface
+- Improved ranking of suggestions
+- Performance optimization for large datasets
